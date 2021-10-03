@@ -15,7 +15,7 @@ run the PC host software
 python rodriguez.py
 ```
 looks like this,
-![curve_tracer_GUI.JPG](curve_tracer_GUI.JPG) 
+![curve_tracer_GUI_neat.JPG](curve_tracer_GUI_neat.JPG) 
 
 
 build the PC host saftware to EXE, WIN10 did not work out, error, module forms not found
