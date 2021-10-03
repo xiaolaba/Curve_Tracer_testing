@@ -10,11 +10,11 @@ pip install PyQT5
 pip install auto-py-to-exe
 ```
 
-run the PC host software
+run the PC host software  
 ```
-python rodriguez.py
+python rodriguez.py  
 ```
-looks like this,
+looks like this,  
 ![curve_tracer_GUI_neat.JPG](curve_tracer_GUI_neat.JPG) 
 
 
