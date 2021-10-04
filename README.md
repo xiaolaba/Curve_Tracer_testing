@@ -16,8 +16,11 @@ delete license exisitng file.
 add license.txt  
 set GPL V2  
 
+### circuit diagram
+![NPN_why_different_shape2.JPG](NPN_why_different_shape2.JPG)  
 
 
+### software, PC host, python 3.7 installed already
 python, setup tool first for PC host software
 ```
 python.exe -m pip install --upgrade pip
@@ -45,6 +48,12 @@ build the PC host saftware to EXE, WIN10, build ok, run ok
 pyinstaller --onefile rodriguez.py
 ```
 
+### software, Arduino firmware (Atmega328p)
+burn the chip, connect arduino Nano to PC  
+change comport to your PC showing with burn_no_bootloader.bat  
+run burn_no_bootloader.bat  
+curve_tracer.hex will be upload to Nano  
+job done 
 
 ### prototype is working perhaps but...
 any of NPN curve trace is typical found from any of transistor data sheet, however my prototype was not getting anything close to those, not even to original author's nor 2SC1815's,  
