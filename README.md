@@ -45,3 +45,9 @@ build the PC host saftware to EXE, WIN10, build ok, run ok
 pyinstaller --onefile rodriguez.py
 ```
 
+
+### prototype is working perhaps but...
+any of NPN curve trace is typical found from any of transistor data sheet, however my prototype was not getting anything close to those, not even to original author's nor 2SC1815's,
+![NPN_why_different_shape2.JPG](NPN_why_different_shape2.JPG)  
+![NPN_why_different_shape.JPG](NPN_why_different_shape.JPG)  
+
