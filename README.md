@@ -18,6 +18,8 @@ set GPL V2
 
 ### circuit diagram
 ![curve_tracer_prototype_circuit.JPG](curve_tracer_prototype_circuit.JPG)  
+schematic,  
+![curve_tracer_schematic.JPG](curve_tracer_schematic.JPG)  
 
 
 ### software, PC host, python 3.7 installed already
