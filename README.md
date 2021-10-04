@@ -2,8 +2,20 @@
 clone, no fork, https://github.com/JosephEoff/Rodriguez, blog https://josepheoff.github.io/posts/iv-1a
 
 this repo was created casually as project folder and I did not aware any minor/major difference of the MIT/GPL or whatever of all of those fancy terms, thanks for the original author and reminding something may help.  
+```
+"Rodriguez" is licensed under the GNU General Public License, version 2.
+
+Your repository has the license set to MIT. By the terms of the GPL, only the copyright holder (me, Joseph Eoff) can change the license.
+
+Please change the license on the repository to GPL V2, or delete the repository.
+```
+
 how to change license of a exisitng repo.,  
 https://github.community/t/how-to-change-license-for-a-repository/126844
+delete license exisitng file.  
+add license.txt  
+set GPL V2  
+
 
 
 python, setup tool first for PC host software
