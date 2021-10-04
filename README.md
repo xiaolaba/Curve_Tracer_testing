@@ -66,4 +66,8 @@ VCC /AVCC / GND/ MI / MO / SCK/ RESET, uses 8pins, AVCC / VCC must be connected 
 any of NPN curve trace is typical found from any of transistor data sheet, however my prototype was not getting anything close to those, not even to original author's nor 2SC1815's,  
 ![NPN_why_different_shape2.JPG](NPN_why_different_shape2.JPG)    
 ![NPN_why_different_shape.JPG](NPN_why_different_shape.JPG)    
+.   
+.  
+Diode testing, LED used, the plot is a bit close to except sign of opposites  
+![LED_looks_ok_but.JPG](LED_looks_ok_but.JPG)  
 
