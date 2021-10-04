@@ -17,7 +17,7 @@ add license.txt
 set GPL V2  
 
 ### circuit diagram
-![NPN_why_different_shape2.JPG](NPN_why_different_shape2.JPG)  
+![curve_tracer_prototype_circuit.JPG](curve_tracer_prototype_circuit.JPG)  
 
 
 ### software, PC host, python 3.7 installed already
