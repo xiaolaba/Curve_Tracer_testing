@@ -1,6 +1,10 @@
 # Curve_Tracer_testing
 clone, no fork, https://github.com/JosephEoff/Rodriguez, blog https://josepheoff.github.io/posts/iv-1a
 
+this repo was created casually as project folder and I did not aware any minor/major difference of the MIT/GPL or whatever of all of those fancy terms, thanks for the original author and reminding something may help.  
+how to change license of a exisitng repo.,  
+https://github.community/t/how-to-change-license-for-a-repository/126844
+
 
 python, setup tool first for PC host software
 ```
