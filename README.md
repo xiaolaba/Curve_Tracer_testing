@@ -54,8 +54,11 @@ change comport to your PC showing with burn_no_bootloader.bat
 run burn_no_bootloader.bat  
 curve_tracer.hex will be upload to Nano    
 
-or uses Arduino IDE, clone & compile the whole original project https://github.com/JosephEoff/Rodriguez 
+or uses Arduino IDE, clone & compile the whole original project https://github.com/JosephEoff/Rodriguez  
 
+No uses NANO but barebond Atmega328p or Atmega168p ? uses burn_use_usbtiny.bat via ISP interface.  
+VCC /AVCC / GND/ MI / MO / SCK/ RESET, uses 8pins, AVCC / VCC must be connected together, GND is so.  
+![atmega328p.JPG](atmega328p.JPG)  
 
 ### prototype is working perhaps but...
 any of NPN curve trace is typical found from any of transistor data sheet, however my prototype was not getting anything close to those, not even to original author's nor 2SC1815's,  
