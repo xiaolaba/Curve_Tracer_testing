@@ -52,8 +52,10 @@ pyinstaller --onefile rodriguez.py
 burn the chip, connect arduino Nano to PC  
 change comport to your PC showing with burn_no_bootloader.bat  
 run burn_no_bootloader.bat  
-curve_tracer.hex will be upload to Nano  
-job done 
+curve_tracer.hex will be upload to Nano    
+
+or uses Arduino IDE, clone & compile the whole original project https://github.com/JosephEoff/Rodriguez 
+
 
 ### prototype is working perhaps but...
 any of NPN curve trace is typical found from any of transistor data sheet, however my prototype was not getting anything close to those, not even to original author's nor 2SC1815's,  
