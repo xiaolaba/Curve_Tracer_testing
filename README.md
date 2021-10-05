@@ -126,3 +126,9 @@ void loop() {
 this is interesting enough to see a really "bug" perhaps within the arduino firmware code but not the PC hostware, what really instresting is to know the WHY and how to see this why. As original author saying the design is base on OHM's law and does all calculation/plot at PC hostware, there must be something and the cause to see wrong VF calculation and plot region. recap the graphing line between two points, y=ax+b, it is something that we need to take care, the negative sign will possible lead to wrong plot and region, and solution is making all calculation has positive result, try this, swap two values of which greater one leading and smaller one follow after, there will be always positive sign with substraction, in contrast there will be negative result. try this to prove the concept, plot again, seems working as expected, and yellow LED VF plot close to the DMM reading 1,89V at the end, and plot is looks to close to usual VF plot.
 ![VF_plot_positive.JPG](VF_plot_positive.JPG)  
 
+
+
+### tracing speed consideration
+oversampling was good however user has to be very very very patient and waiting for the completion. Try different way, 8 bit machine and hardware filtering design, no uses oversampling thus the speeding up, tracing a LED / diode likely less than 10 seconds, and the curve is still possible very matching raw plot, filter coefficient has been tested from 0 (no filtering) to max 8, so far 0 - 4 should be ok. but it is not working for NPN/PNP tracing, did not know why, used this for diode only. experimental hex code are these provided, [burn_4x_use_usbtiny.bat](burn_4x_use_usbtiny.bat) & [curve_tracer4x.hex](curve_tracer4x.hex)  
+![filter_response.JPG](filter_response.JPG)   
+
