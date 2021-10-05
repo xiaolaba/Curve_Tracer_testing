@@ -84,7 +84,7 @@ The alternative is to find some more easy way for the beginner, looks at those s
 PC hostware sent string "0B\n0C\n" to arduino;  
 Ardunio reply "0\t0\t0\t0\t\r\n" of which is in ASCII byte stream 0x30, 0x09, 0x30, 0x09, 0x30, 0x09m 0x30, 0x0d, 0x0a, and 0x09 is TAB, repeat the string 5 times, and then sent whatever required  
 string format is again "123\t234\t456\t678\t\r\n"  
-PC hostware is going to display something for visual as long as click "RUN"
+PC hostware is going to display something for visual as long as click "RUN"  
 the testing arduino code is confirmed, no issue to see positive VF plot, try the code as folliwng,
 ```
 // xiaolaba, testing the hostware of curve tracer, why and how VF plot get negative
