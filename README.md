@@ -76,7 +76,8 @@ Diode testing, LED used, the plot is a bit close to except sign of opposites
 ### arduino code or perhaps the bug
 nothing close the real rig as LED forward voltage drop should not be that 4V or above, the average is 3.1V of white LED and the Yellow one used should be 1.9V something, and however LED VF plot is usually the I/V mostlikely at 1st region. there are two question remains unknown, but why ? no digging to python source code becasue infamiliar with.
 ![VF_plot_negative.JPG](VF_plot_negative.JPG)    
-
+![LED_VF_plot_NG_why.JPG](LED_VF_plot_NG_why.JPG)  
+ 
 
 The alternative is to find some more easy way for the beginner, looks at those serial communication in between the PC hostware and Atmega328p, here it is how it work out,
 
