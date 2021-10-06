@@ -1,0 +1,43 @@
+
+scope + tracer, real time
+
+Create Your Own I-V Curve Tracer - Circuit Cellar by Dr George R. Steber.pdf
+https://circuitcellar.com/research-design-hub/create-your-own-i-v-curve-tracer/
+
+I Curve Tracer ¡V I ¡V Kerry D.pdf
+http://www.kerrywong.com/2013/09/02/yet-another-semiconductor-vi-curve-tracer/
+
+
+PC sound card + OPA, real time, win10 ok
+
+A Low Cost Automatic Curve Tracer by Dr George R. Steber.pdf
+https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwjtrq242rTzAhWRBKYKHRIPCkcQFnoECAUQAQ&url=https%3A%2F%2Fwww.eevblog.com%2Fforum%2Fbeginners%2Fdirt-cheap-and-simple-scope-based-component-tester-curve-tracer%2F%3Faction%3Ddlattach%3Battach%3D25495&usg=AOvVaw17-SUGMtKLVJE86MYXnevq
+software,
+A Low Cost Automatic Curve Tracer software by Dr George R. Steber 7x06Steber.zip
+http://www.arrl.org/files/file/QEX%20Binaries/06_July/7x06Steber.zip
+
+
+
+Bipolar Transistor Application Note Maximum ratings
+https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwidrIrQ27TzAhUNGKYKHaU9BaMQFnoECCAQAQ&url=https%3A%2F%2Ftoshiba.semicon-storage.com%2Finfo%2Fdocget.jsp%3Fdid%3D63509&usg=AOvVaw1MbGfQFWZkXSDazyAN7nIg
+application_note_en_20210303_AKX00048.pdf
+
+
+
+Arduino tracer
+
+Arduino Based Project on Transistor Curve Tracer.pdf, OPA
+https://www.elprocus.com/arduino-project-on-transistor-curve-tracer/
+
+
+Arduino BiCMOS Curve Tracer, OPA
+http://www.idea2ic.com/BiCmosCurveTracer/Arduino%2520BiCmos%2520Curve%2520Tracer.html
+
+
+Rodriguez
+Arduino + RC + PC python, like transistor tester, simple rig for experiment but slow
+good learning material and easy circuit, 5V only
+clone, no fork, https://github.com/JosephEoff/Rodriguez, blog https://josepheoff.github.io/posts/iv-1a
+
+
+
