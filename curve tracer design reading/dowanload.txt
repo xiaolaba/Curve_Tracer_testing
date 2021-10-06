@@ -16,6 +16,8 @@ software,
 A Low Cost Automatic Curve Tracer software by Dr George R. Steber 7x06Steber.zip
 http://www.arrl.org/files/file/QEX%20Binaries/06_July/7x06Steber.zip
 
+DIY Generic Curve Tracer
+https://www.electronics-lab.com/diy-generic-curve-tracer/
 
 
 Bipolar Transistor Application Note Maximum ratings
