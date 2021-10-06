@@ -36,7 +36,7 @@ run the PC host software
 ```
 python rodriguez.py  
 ```
-looks like this,  
+looks like this, no need any external component, just burn the code to arduino, use fingers and touching A0-A3 will show something,  
 ![curve_tracer_GUI_neat.JPG](curve_tracer_GUI_neat.JPG) 
 
 
@@ -131,4 +131,11 @@ this is interesting enough to see a really "bug" perhaps within the arduino firm
 ### tracing speed consideration
 oversampling was good however user has to be very very very patient and waiting for the completion. Try different way, 8 bit machine and hardware filtering design, no uses oversampling thus the speeding up, tracing a LED / diode likely less than 10 seconds, and the curve is still possible very matching raw plot, filter coefficient has been tested from 0 (no filtering) to max 8, so far 0 - 4 should be ok. but it is not working for NPN/PNP tracing, did not know why, used this for diode only. experimental hex code are these provided, [burn_4x_use_usbtiny.bat](burn_4x_use_usbtiny.bat) & [curve_tracer4x.hex](curve_tracer4x.hex)  
 ![filter_response.JPG](filter_response.JPG)   
+
+
+### original author has arduino code patched up
+The oroginal author is kindly enough to drop me a note that telling the arduino code fixed up and should ok to see good diode plot, that is excellent, later on to be testing again.
+
+### learning material, learn from those goodies
+As learning project going, those collected years ago of reading about Curve tracer design has been reviewed again,  as students perhaps instresting to know any of those to see good design and basis. this is the link and materials, [curve tracer design reading](curve tracer design reading).  
 
