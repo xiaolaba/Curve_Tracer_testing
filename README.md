@@ -137,5 +137,5 @@ oversampling was good however user has to be very very very patient and waiting 
 The oroginal author is kindly enough to drop me a note that telling the arduino code fixed up and should ok to see good diode plot, that is excellent, later on to be testing again.
 
 ### learning material, learn from those goodies
-As learning project going, those collected years ago of reading about Curve tracer design has been reviewed again,  as students perhaps instresting to know any of those to see good design and basis. this is the link and materials, [curve tracer design reading](curve tracer design reading).  
+As learning project going, those collected years ago of reading about Curve tracer design has been reviewed again,  as students perhaps instresting to know any of those to see good design and basis. this is the link and materials, [curve tracer design reading](https://github.com/xiaolaba/Curve_Tracer_testing/tree/main/curve%20tracer%20design%20reading).  
 
