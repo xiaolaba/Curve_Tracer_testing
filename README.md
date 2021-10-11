@@ -198,3 +198,7 @@ The Ib is far beyond the tracing purpose because NPN 2n3904 is dead hard turn on
 
 This is really design constraint by hostware to stepping those number of traces, many of detail has been skipped, there are two possible soutlions, change Rb to be greater, or remove hostware constrain, let MCU to handle this Ib setting, either ways, the Ib may stepping form 10uA to 100uA by 10's increament to reveal a Ic/Vce typical plot. this is example, typical datasheet is showing traces with Ib 10uA - 60uA, my plot has only one steping from 10 to 100. that is why_my_trace_one_curve_only, now I understand. ofcourse, the plot became normal to fit to 1st quadrant as arduino code patched as original author fixed up, the same to correct negative sign of calculation result.
 ![why_trace_one_curve_only.JPG](why_trace_one_curve_only.JPG)  
+
+
+### Rb and Rc, change values for what
+change values of Rb and Rc, next move will be trying Rb,100K and Rc,220 ohm, Ic will be double above, and hopefully see more traces of action region of my NPN transistor, turn it dead hard on or cut-off is so easy, but would be fun as seeing active region by myself because I had have no that tools/chance before this moment.
