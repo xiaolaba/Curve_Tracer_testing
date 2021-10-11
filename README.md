@@ -139,3 +139,62 @@ The oroginal author is kindly enough to drop me a note that telling the arduino 
 ### learning material, learn from those goodies
 As learning project going, those collected years ago of reading about Curve tracer design has been reviewed again,  as students perhaps instresting to know any of those to see good design and basis. this is the link and materials, [curve tracer design reading](https://github.com/xiaolaba/Curve_Tracer_testing/tree/main/curve%20tracer%20design%20reading).  
 
+### coding and practices abstraction
+Arduino code & the "bug" has nothing special but all the time with software/hardware development project and coexisted, how did you remeber every single detial or proof not to be wrong, no easy. The abstraction is better approach, try something new with coding skill,
+```
+#define Vbs_sense A0 // ADC0, used to detect Vb bias, the supply voltage
+#define Vb_sense  A1 // ADC1, used to detect Vb voltage
+#define Vcs_sense A2 // ADC2, used to detect Vc bias, the supply voltage
+#define Vc_sense  A3 // ADC3, used to detect Vc voltage
+
+/*    
+      unsigned long VBias = 0;
+      unsigned long VBase = 0;
+      unsigned long VCollector = 0;
+      unsigned long VCollectorBias = 0;
+    
+      VBias = VBias + analogRead(A0);
+      VBase = VBase + analogRead(A1);
+      VCollector = VCollector + analogRead(A3);
+      VCollectorBias = VCollectorBias + analogRead(A2);
+*/
+
+      unsigned long Vbs = 0; // VBias, Vb bias, the supply voltage
+      unsigned long Vb  = 0; // VBase
+      unsigned long Vc  = 0; // VCollector
+      unsigned long Vcs = 0; // VCollectorBias, Vc bias, the supply voltage
+      
+      // self proveness coding technique, abstraction
+      // no longer required to rememebr what I/O pin should be
+      Vbs = Vbs + analogRead(Vbs_sense); 
+      Vb  = Vb  + analogRead(Vb_sense);
+      Vcs = Vcs + analogRead(Vcs_sense);
+      Vc  = Vc  + analogRead(Vc_sense);
+      
+      Serial.println(String(Vbs) + "\t" + String(Vb) + "\t" + String(Vc) + "\t" + String(Vcs));    
+}
+      
+```
+
+Once required to change wiring or need to swap those I/O pin, the code is required only to deal with the those #define, no others, for example,
+```
+#define Vbs_sense A5 // ADC5, used to detect Vb bias, the supply voltage
+#define Vb_sense  A6 // ADC6, used to detect Vb voltage
+#define Vcs_sense A7 // ADC7, used to detect Vc bias, the supply voltage
+#define Vc_sense  A8 // ADC8, used to detect Vc voltage
+```
+
+this trying is not bad.
+
+### Traces but why was my plot with a single curve only
+Rb is the 10K (author used 3k3, but does not matter here) base resistor used, a variable source voltage source by PWM & RC filtering is taking place, hostware issuing command strings from "0B" to "1022B", it is telling the Atmega328p to clock the PWM output and ratio to match 1% to 100% power output, there Vb output and  resultant of base current Ib make sense to be Ib = Vbs / Rb.
+
+experiment with setup 2 traces will see 3 command strings only for variable source voltage, for example "0B" "512B" and "1022B", that is equally saying 0%, 50% and 100% for the voltage source, because of the Arduino is 5V powered (actually is 4.75V pass through by a protection diode), 0% = 0V, 50% = 2.36V, 100% = 4.75V
+
+To calcuate the Ib with 2.36v supply voltage,
+Ib = 2.36V / 1k = 236uA
+
+The Ib is far beyond the tracing purpose because NPN 2n3904 is dead hard turn on, nothing seeing for the active region but saturation.
+
+This is really design constraint by hostware to stepping those number of traces, many of detail has been skipped, there are two possible soutlions, change Rb to be greater, or remove hostware constrain, let MCU to handle this Ib setting, either ways, the Ib may stepping form 10uA to 100uA by 10's increament to reveal a Ic/Vce typical plot. this is example, typical datasheet is showing traces with Ib 10uA - 60uA, my plot has only one steping from 10 to 100. that is why_my_trace_one_curve_only, now I understand. ofcourse, the plot became normal to fit to 1st quadrant as arduino code patched as original author fixed up, the same to correct negative sign of calculation result.
+![why_trace_one_curve_only.JPG](why_trace_one_curve_only.JPG)  
