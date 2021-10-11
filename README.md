@@ -192,7 +192,7 @@ Rb is the 10K (author used 3k3, but does not matter here) base resistor used, a 
 experiment with setup 2 traces will see 3 command strings only for variable source voltage, for example "0B" "512B" and "1022B", that is equally saying 0%, 50% and 100% for the voltage source, because of the Arduino is 5V powered (actually is 4.75V pass through by a protection diode), 0% = 0V, 50% = 2.36V, 100% = 4.75V
 
 To calcuate the Ib with 2.36v supply voltage,
-Ib = 2.36V / 1k = 236uA
+Ib = 2.36V / 10k = 236uA
 
 The Ib is far beyond the tracing purpose because NPN 2n3904 is dead hard turn on, nothing seeing for the active region but saturation.
 
