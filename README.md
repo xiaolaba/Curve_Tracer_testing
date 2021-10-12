@@ -201,4 +201,38 @@ This is really design constraint by hostware to stepping those number of traces,
 
 
 ### Rb and Rc, change values for what
-change values of Rb and Rc, next move will be trying Rb,100K and Rc,220 ohm, Ic will be double above, and hopefully see more traces of action region of my NPN transistor, turn it dead hard on or cut-off is so easy, but would be fun as seeing active region by myself because I had have no that tools/chance before this moment.
+change values of Rb and Rc, next move will be trying Rb,100K and Rc,220 ohm, Ic will be double above, and hopefully see more traces of action region of my NPN transistor, turn it dead hard on or cut-off is so easy, but would be fun as seeing active region by myself because I had have no that tools/chance before this moment.  
+
+
+### log and to see what was going on  
+python code was not my knowledge so far, but it is plain-text code for an interpreter language something. Hostware is initiating the curve tracing for Ib stepping and Vce sampling, log and review those ascii strem as log and try to undestand the process.  
+![reduntant_CRLF.JPG](reduntant_CRLF.JPG)  
+
+my logger windows, easy to see sequence but data stream has no display properly for delimiter TAB (0x09, or \t) and field separation, thus 4 fields of data stream Vbs\tVb\Vc\tVcs\r\n, it is simply given of very lengthen string of digits, no easy for human. logger problem or really hostware design or python limitation, do not know yet.  
+
+Copy the log to text editor, the resultant is easy for human because of TAB was properly displayed, see four fields with desired numbers, however there were reduntant CRLF (\r\n, in c/c++ code) for each even line, the commands by hostware, except the first line 000000:0B, that was an issue so far no big deal as ardunio code handled \r\n or send those properly, but a bit confuse for my reading. let's see what could be done if feasible.  
+
+hostware commanding curve tracer to prepare start of tracing, command sequency is 0B, 1023C, 170C and then repeat 510 times of 255B (4 traces mode, 1023/4 = 255, in case 2 traces, it would be 1023/2 = 511 round down).  
+1. 0B, set Vb_supply to 0%  
+2. 1023C, set Vc_supply to 100% (Atmega328p ADC in 10bit mode, total 1023 steps where 1023 came form)  
+3. 170C, set Vc_supply to 170/1023= 16.7%, why ?  
+4. 255B, set Vb_supply to 25%, but why loop 510 times for every trace ? charing the 10uf capacitor to build up steady Vb_supply voltage ?  
+
+### python code the first glance
+how the hostware to issue command "0B", digging and try my best to understand something new.  
+the code and file, \forms\IVTracer.py  
+yes, it is almost there and looks like python code is not so hard for understnading.  
+![python_code_1st_glance.JPG](python_code_1st_glance.JPG)  
+
+### python code why CRLF reduntant
+every Serial.write is giving the command flow to Arduino, and then serial.readline is used for capture tracing data, this is the point with reduntant CRLF, \r\n, \r and \n used by python code has difference, and Arduino sendout \r\n will trigger such CRLF reduntant. This is perhaps bug deep inside the python3.x,
+```
+    // console mode, python code used readline
+    //
+    // https://docs.python.org/3/library/io.html#io.IOBase.readline
+    // readline(size=- 1)
+    // Read and return one line from the stream. If size is specified, at most size bytes will be read.
+    // The line terminator is always b'\n' for binary files; for text files, the newline argument to open() can be used to select the line terminator(s) recognized.
+```
+
+workaround, do not uses Serial.println("123"), try arduino code only with Serial.print("123\n")  
