@@ -236,3 +236,15 @@ every Serial.write is giving the command flow to Arduino, and then serial.readli
 ```
 
 workaround, do not uses Serial.println("123"), try arduino code only with Serial.print("123\n")  
+
+
+### CRLF redundant, whether the logger fault ?
+scratching head did not help out, and found nowhere to have clue why has communication that undesired CRLF inserted in between arduino and hostware, both source codes of arduino and python examined and simplest test code, all of them seeing no problem but logger and output file always shit, original author even written me more detial and explained that \r used by hostware, and \r\n for arduino code.  
+once back to town and will try to see what could be found with those open source tools, 
+```
+https://sourceforge.net/projects/com0com/files/latest/download com0com 3.0.0, Null-modem emulator com0com-3.0.0.0-i386-and-x64-signed.zip  
+https://github.com/xiaolaba/SerialSniffer, fork and read issues, pathed two missing files, compile done       
+```
+
+
+
