@@ -342,4 +342,6 @@ something is interesting from the log data, every time Vce stepping from 0C to 1
 
 ```
 
+the graph plot has a spike downward  
+![0C_spike.JPG](0C_spike.JPG)  
 
