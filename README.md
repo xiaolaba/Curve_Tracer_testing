@@ -345,3 +345,9 @@ something is interesting from the log data, every time Vce stepping from 0C to 1
 the graph plot has a spike downward  
 ![0C_spike.JPG](0C_spike.JPG)  
 
+
+### Ib, the trends are different with different supply voltage  
+the data log is given more detial  
+Vbs setup 50%, trend downward, 100% with upward, why Ib was that ?   
+oversampling 256 times, changed to 255 to fit with 8bit software counter, it does not affect those trends.  
+![522B_downward_1022B_upward_why.JPG](522B_downward_1022B_upward_why.JPG)  
