@@ -318,7 +318,7 @@ command,function,Vbs,Vb,Vcs,Vc
 ...
 ```
 
-something is instresting from the log data, every time Vce stepping from 0C to 1C, the Vcs & Vc has spike, but why ?  
+something is interesting from the log data, every time Vce stepping from 0C to 1C, the Vcs & Vc has spike, but why ?
 
 ```
 511B,Ib_sampling,122172,32727,28883,1847
