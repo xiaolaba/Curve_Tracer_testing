@@ -246,5 +246,100 @@ https://sourceforge.net/projects/com0com/files/latest/download com0com 3.0.0, Nu
 https://github.com/xiaolaba/SerialSniffer, fork and read issues, pathed two missing files, compile done       
 ```
 
+### try to not uses logger but print() of python code to see CRLF and log
+the side project was done, https://github.com/xiaolaba/com0com-serial-port-sniffer-testing
+it is clear seeing something with python 3.x and the crlf bug incurred, let it be.
+uses the print() to build the log, the idea is send command to arduino, read serial port and print everything to a single line to file.
+
+
+```
+import sys
+logFile = "curve_trace_log.csv"
+msg = ""
+valuestring =""
+f = open(logFile,'w')
+
+def createLog(self):
+        #with open(logFile,'w') as f:
+        #    f.close()
+        #open(logFile,'a') 
+        f = open(logFile,'w')
+        f.close()
+        f = open(logFile,'a')
+        sys.stdout = f # Change the standard output to the file we created.        
+        
+
+    def writeLog(self, s):
+        #with open(logFile,'a') as f:
+        #    f.write(s)
+        #f.write(s)
+        print (s, end="") ## end="" did not uses \r\n
+        #print('hello')
+    
+    def closeLog(self):
+        f.close()
+        #sys.stdout = f # Change the standard output to the file we created.   
+```
+
+
+```
+    def trace(self, command):
+        msg = command       
+        self.serialport.write(msg.encode())
+        valuestring = (self.readFromSerialPort() ).strip()  ## strip() remove all \r \n \r\n
+        print(msg.strip(), end="")  # no \r\n or crlf        
+        print(valuestring.decode()) ## print(xx.decode()) string, output 'xx'    
+
+    def traceNPNTransistor(self):
+    
+        self.createLog() # redirect print to stdout
+        
+        msg = "0B,setVbs_0%,\r"
+        #Set the output to zero volts.  Read and discard the first values.
+        #self.serialport.write(("0B"+chr(13)).encode())
+        #self.serialport.write(("0B_setVbs_0%_\r").encode())
+        self.serialport.write(msg.encode())
+
+        valuestring = (self.readFromSerialPort() ).strip()  ## strip() remove all \r \n \r\n
+        print(msg.strip(), end="")  # no \r\n or crlf
+        #print(valuestring) ## print(xx) string, output b'xx\r\n'
+        print(valuestring.decode()) ## print(xx.decode()) string, output 'xx'
+
+```
+
+log file, [curve_trace_log 0C no delay.csv](curve_trace_log 0C no delay.csv)  
+```
+command,function,Vbs,Vb,Vcs,Vc
+0B,setVbs_0%,0,0,0,0
+1023C,setVcs_100%,0,0,253953,254246
+511B,set_Vb,191285,34733,181023,14456
+170C,Get_Ib,243550,33956,31271,1292
+...
+...
+```
+
+something is instresting from the log data, every time Vce stepping from 0C to 1C, the Vcs & Vc has spike, but why ?  
+
+```
+511B,Ib_sampling,122172,32727,28883,1847
+511B,Ib_sampling,122160,32727,28887,1851
+511B,Ib_sampling,122160,32703,28885,1856
+0C,Vcs_rampup,122356,31771,474,272
+1C,Vcs_rampup,122423,31753,0,245
+2C,Vcs_rampup,122432,31753,129,268
+3C,Vcs_rampup,122423,31752,372,291
+
+...
+...
+...
+
+
+1022B,Ib_sampling,244517,33947,28735,1229
+1022B,Ib_sampling,244527,33940,28728,1225
+0C,Vcs_rampup,244728,33414,462,246
+1C,Vcs_rampup,244807,33405,0,234
+2C,Vcs_rampup,244797,33405,0,248
+
+```
 
 
