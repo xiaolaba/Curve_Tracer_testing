@@ -307,7 +307,7 @@ def createLog(self):
 
 ```
 
-log file, [curve_trace_log 0C no delay.csv](curve_trace_log 0C no delay.csv)  
+log file, [curve_trace_log_0C_no_delay.csv](curve_trace_log_0C_no_delay.csv)  
 ```
 command,function,Vbs,Vb,Vcs,Vc
 0B,setVbs_0%,0,0,0,0
