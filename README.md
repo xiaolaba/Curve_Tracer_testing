@@ -351,3 +351,23 @@ the data log is given more detial
 Vbs setup 50%, trend downward, 100% with upward, why Ib was that ?   
 oversampling 256 times, changed to 255 to fit with 8bit software counter, it does not affect those trends.  
 ![522B_downward_1022B_upward_why.JPG](522B_downward_1022B_upward_why.JPG)  
+
+
+### Ic / Vce plot finally  
+Rb 10K, extra in series Rbx 30k, total 40k, Rc turns to 250 (1K of 4 in parallel), got my first IV plot and visual, it is not ON-semi transistor but no brand name. schematic redraw and more easy to follow up. Arduino Nano and used D10 D9, swapped pinout and different from original author design. arduino code and easy fix,
+```
+
+#include <TimerOne.h>
+
+//#define BASE_OUT_PIN 9
+//#define COLLECTOR_OUT_PIN 10
+
+#define BASE_OUT_PIN 10
+#define COLLECTOR_OUT_PIN 9
+
+```
+
+![2021-10-25_2n3904_trace.JPG](2021-10-25_2n3904_trace.JPG)  
+![schematic_redraw.JPG](schematic_redraw.JPG)  
+
+
