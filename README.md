@@ -371,12 +371,12 @@ Rb 10K, extra in series Rbx 30k, total 40k, Rc turns to 250 (1K of 4 in parallel
 ![schematic_redraw.JPG](schematic_redraw.JPG)  
 
 testing video log, direct capture to facebook host, no need local video capturing, easy the slow computer and no overloading, youtube did not works, did not know why.  
-https://www.facebook.com/laba.xiao.75/videos/407748904323089
-https://www.facebook.com/laba.xiao.75/videos/407748904323089
-https://www.facebook.com/laba.xiao.75/videos/873015660069245
-https://www.facebook.com/laba.xiao.75/videos/468019417831798
-https://www.facebook.com/laba.xiao.75/videos/4622127197830528
-https://www.facebook.com/laba.xiao.75/videos/976953306557382
-https://www.facebook.com/laba.xiao.75/videos/339829094567445
+https://www.facebook.com/laba.xiao.75/videos/407748904323089  
+https://www.facebook.com/laba.xiao.75/videos/407748904323089  
+https://www.facebook.com/laba.xiao.75/videos/873015660069245  
+https://www.facebook.com/laba.xiao.75/videos/468019417831798  
+https://www.facebook.com/laba.xiao.75/videos/4622127197830528  
+https://www.facebook.com/laba.xiao.75/videos/976953306557382  
+https://www.facebook.com/laba.xiao.75/videos/339829094567445  
 
 
